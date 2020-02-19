@@ -1,5 +1,3 @@
-package com.remote.utils;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -11,10 +9,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.LinkedList;
 
-/**
- *
- * @author Naruto
- */
 public class ImageExtractor {
 
     private LinkedList<Rectangle> rectangles = new LinkedList<Rectangle>();
@@ -59,7 +53,6 @@ public class ImageExtractor {
             this.differenceMap = this.imgExpected.copy(Bitmap.Config.ARGB_8888, true);
         }
         for (int x = 0; x < Math.min(imgExpected.getWidth(), imgAtual.getWidth()); x++) {
-            //System.out.println((double) x / differenceMap.getWidth() * 100 + "%");
             for (int y = 0; y < Math.min(imgExpected.getHeight(), imgAtual.getHeight()); y++) {
                 int pixel1 = imgExpected.getPixel(x, y);
                 int pixel2 = imgAtual.getPixel(x, y);
